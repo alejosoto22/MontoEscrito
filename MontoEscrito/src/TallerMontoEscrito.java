@@ -1,23 +1,18 @@
 
+import java.util.Scanner;
+
 public class TallerMontoEscrito {
 
 	public static void main(String args[]) {
-		System.out.println("Hola mundo");
 		
-		byte edad;
-		edad=32; 
+		int numero;
+		Scanner ingrese = new Scanner(System.in);
+		
+		numero=ingrese.nextInt();
 		
 		
-		System.out.println(edad);
+		System.out.println(numero);
 		
-		edad=6;
-		
-		System.out.println(edad);
-		
-		edad=26;
-		
-		System.out.println(edad);
-		
-		// sigo con el video 10.
+
 	}
 }
