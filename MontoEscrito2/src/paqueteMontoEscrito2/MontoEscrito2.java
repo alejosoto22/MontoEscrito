@@ -6,24 +6,25 @@ public class MontoEscrito2 {
 		
 		switch(numero) {
 			case 0: respuesta="cero";
-		switch(numero) {
-			case 1: respuesta="uno";		
-		switch(numero) {
-			case 2: respuesta="dos";		
-		switch(numero) {
-			case 3: respuesta="tres";		
-		switch(numero) {
+			break;
+			case 1: respuesta="uno";	
+			break;
+			case 2: respuesta="dos";	
+			break;
+			case 3: respuesta="tres";	
+			break;
 			case 4: respuesta="cuatro";		
-		switch(numero) {
-			case 5: respuesta="cinco";		
-		switch(numero) {
+			break;
+			case 5: respuesta="cinco";	
+			break;
 			case 6: respuesta="seis";		
-		switch(numero) {
-			case 7: respuesta="siete";		
-		switch(numero) {
+			break;
+			case 7: respuesta="siete";	
+			break;
 			case 8: respuesta="ocho";		
-		switch(numero) {
+			break;
 			case 9: respuesta="nueve";		
+			break;
 				
 		}
 		
