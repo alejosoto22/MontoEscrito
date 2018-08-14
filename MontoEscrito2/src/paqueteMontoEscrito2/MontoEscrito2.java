@@ -2,6 +2,8 @@ package paqueteMontoEscrito2;
 
 public class MontoEscrito2 {
 	String respuesta;
+	
+//--------------------------------------------------------------------
 	public String calcularUnidad(int numero) {
 		
 		switch(numero) {
@@ -91,35 +93,6 @@ public class MontoEscrito2 {
 		}
 //------------------------------------------------------------	
 	
-	public String calcularOnce(int numero) {
-		
-		switch(numero) {
-			case 11: respuesta="once";	
-			break;
-			case 12: respuesta="doce";	
-			break;
-			case 13: respuesta="trece";	
-			break;
-			case 14: respuesta="catorce";		
-			break;
-			case 15: respuesta="quince";	
-			break;
-			case 16: respuesta="dieciseis";		
-			break;
-			case 17: respuesta="diecisiete";	
-			break;
-			case 18: respuesta="dieciocho";		
-			break;
-			case 19: respuesta="diecinueve";		
-			break;
-				
-		}
-		
-		return respuesta;
-	
-	}
-//-----------------------------------------------------------
-
 	public String calcularCentena(int numero) {
 		
 		switch(numero) {

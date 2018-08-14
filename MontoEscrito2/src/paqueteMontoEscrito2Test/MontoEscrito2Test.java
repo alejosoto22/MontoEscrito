@@ -16,5 +16,31 @@ class MontoEscrito2Test extends MontoEscrito2 {
 		String resultadoObtenido = unidades.calcularUnidad(0);
 		assertEquals(resultadoEsperado, resultadoObtenido);
 	}
+	
+	@Test
+	void testDecena() {
+		MontoEscrito2 decenas = new MontoEscrito2();
+		String resultadoEsperado = "veinte";
+		String resultadoObtenido = decenas.calcularDecena(2);
+		assertEquals(resultadoEsperado, resultadoObtenido);
+	}
+	
+	@Test
+	void testOnce() {
+		MontoEscrito2 onces = new MontoEscrito2();
+		String resultadoEsperado = "trece";
+		String resultadoObtenido = onces.calcularOnce(13);
+		assertEquals(resultadoEsperado, resultadoObtenido);
+	}
+	
+	@Test
+	void testCentena() {
+		MontoEscrito2 centenas = new MontoEscrito2();
+		String resultadoEsperado = "quinientos";
+		String resultadoObtenido = centenas.calcularCentena(5);
+		assertEquals(resultadoEsperado, resultadoObtenido);
+	}
+	
+	
 
 }
