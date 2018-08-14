@@ -2,6 +2,7 @@ package paqueteMontoEscrito2;
 
 public class MontoEscrito2 {
 	String respuesta;
+	String resultado;
 	
 //--------------------------------------------------------------------
 	public String calcularUnidad(int numero) {
@@ -109,6 +110,31 @@ public class MontoEscrito2 {
 		
 		return respuesta;
 	}
+//-----------------------------------------------------------------
 	
-}
+	public String convertir(int numero) {
+		int unidadNumero=numero%10;
+		int decenaNumero=numero%100;
+	if((numero/10)==0)	 { resultado=calcularUnidad(numero);}
+	if(((numero/10)<10)&&(unidadNumero==0)) { resultado=calcularDecena(numero/10);}
+	if(((numero/10)<10)&&((numero>10)&&(numero<20))) { resultado=calcularOnce(numero/10);}
+	if(((numero/10)<10)&&(numero>20)) { resultado=calcularDecena(numero/10) + " y " + calcularUnidad(unidadNumero);}
+						 
+	return resultado;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+};
+
+	
 		
