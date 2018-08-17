@@ -99,9 +99,19 @@ public class MontoEscrito2 {
 		switch(numero) {
 			case 1: respuesta="ciento";	
 			break;
+			case 2: respuesta="docientos";	
+			break;
+			case 3: respuesta="trecientos";	
+			break;
+			case 4: respuesta="cuatrocientos";	
+			break;
 			case 5: respuesta="quinientos";	
 			break;
+			case 6: respuesta="seiscientos";	
+			break;
 			case 7: respuesta="setecientos";	
+			break;
+			case 8: respuesta="ochocientos";	
 			break;
 			case 9: respuesta="novecientos";		
 			break;
@@ -110,23 +120,36 @@ public class MontoEscrito2 {
 		
 		return respuesta;
 	}
-//-----------------------------------------------------------------
+//---------------------------------------------------------------------------------
 	
-	public String convertir(int numero) {
+	
+	
+	public String convertirDosDigitos(int numero) {
 		int unidadNumero=numero%10;
-		int decenaNumero=numero%100;
+			
 	if((numero/10)==0)	 { resultado=calcularUnidad(numero);}
-	if(((numero/10)<10)&&(unidadNumero==0)) { resultado=calcularDecena(numero/10);}
-	if(((numero/10)<10)&&((numero>10)&&(numero<20))) { resultado=calcularOnce(numero/10);}
-	if(((numero/10)<10)&&(numero>20)) { resultado=calcularDecena(numero/10) + " y " + calcularUnidad(unidadNumero);}
-						 
+	if(((numero/10)<10)&&((numero/10)>0)&&(unidadNumero==0)) { resultado=calcularDecena(numero/10);}
+	if(((numero/10)<10)&&((numero>10)&&(numero<20))) { resultado=calcularOnce(numero);}
+	if(((numero/10)<10)&&(numero>20)&&(numero<100)) { resultado=calcularDecena(numero/10) + " y " + calcularUnidad(unidadNumero);}
+	
 	return resultado;
 	}
+//---------------------------------------------------------------------------------------------------------------------------	
 	
-	
-	
-	
-	
+	public String convertirCentenas(int numero) {
+		int centena=numero/100;
+		int segundo=((numero/10)%10);
+		int primero=numero%10;
+		int primeroYSegundo=primero + segundo;
+		
+		if(((numero/10)>10)&&(numero/10<100)) { 
+			if(numero==100) { resultado="cien";}
+			
+			if((numero!=100)&&((segundo!=0)&&(primero==0))) { resultado=calcularCentena(centena) + " " + calcularDecena(segundo);}
+			if((numero!=100)&&((segundo==0)&&(primero!=0))) { resultado=calcularCentena(centena) + " " + calcularUnidad(primero);}
+			if((numero!=100)&&(primero!=0)) { resultado=calcularCentena(centena) + " " + calcularDecena(segundo) + " y " + calcularUnidad(primero);}
+			
+		}
 	
 	
 	

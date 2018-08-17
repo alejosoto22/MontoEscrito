@@ -43,9 +43,9 @@ class MontoEscrito2Test extends MontoEscrito2 {
 	
 	@Test
 	void testCalcular() {
-		MontoEscrito2 calcular = new MontoEscrito2();
+		MontoEscrito2 calcularDosDigitos = new MontoEscrito2();
 		String resultadoEsperado = "treinta y cinco";
-		String resultadoObtenido = calcular.convertir(35);
+		String resultadoObtenido = calcularDosDigitos.convertirDosDigitos(35);
 		assertEquals(resultadoEsperado, resultadoObtenido);
 	}
 	
