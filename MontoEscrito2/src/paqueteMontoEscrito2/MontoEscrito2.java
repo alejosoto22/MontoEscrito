@@ -170,59 +170,49 @@ public String calcularMiles(int numero) {
 			if(((numero/10)<10)&&((numero/10)>0)&&(numero%10==0)) { resultado1=calcularDecena(numero/10);}
 			if(((numero/10)<10)&&((numero>10)&&(numero<20))) { resultado1=calcularOnce(numero);}
 			if(((numero/10)<10)&&(numero>20)&&(numero<100)) { resultado1=calcularDecena(numero/10) + " y " + calcularUnidad(numero%10);}
-			
-		}
+			}
 		
-		
-		
-		
+				
 	
 		if(((numero/10)>=10)&&(numero/10<100)) { 
 			if(numero==100) { resultado2="cien";}
 			if((numero!=100)&&((primero==0)&&(segundo==0))) { resultado2=calcularCentena(centena); }
-			
 			if((numero!=100)&&(segundo!=0))	{ if((dosUltimosDigitos/10)==0)	 { resultado2=calcularCentena(centena) + " " + calcularUnidad(dosUltimosDigitos);}
 											  if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos/10)>0)&&(dosUltimosDigitos%10==0)) { resultado2=calcularCentena(centena) + " " + calcularDecena(dosUltimosDigitos/10);}
 											  if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos>10)&&(dosUltimosDigitos<20))) { resultado2=calcularCentena(centena) + " " + calcularOnce(dosUltimosDigitos);}
 											  if(((dosUltimosDigitos/10)<10)&&(dosUltimosDigitos>20)&&(dosUltimosDigitos<100)) { resultado2=calcularCentena(centena) + " " + calcularDecena(dosUltimosDigitos/10) + " y " + calcularUnidad(dosUltimosDigitos%10);}
-											
-			}
+											}
 			if((numero!=100)&&((segundo==0)&&(primero!=0))) { if((dosUltimosDigitos/10)==0)	 { resultado2=calcularCentena(centena) + " " + calcularUnidad(dosUltimosDigitos);}
 															  if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos/10)>0)&&(dosUltimosDigitos%10==0)) { resultado2=calcularCentena(centena) + " " + calcularDecena(dosUltimosDigitos/10);}
 															  if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos>10)&&(dosUltimosDigitos<20))) { resultado2=calcularCentena(centena) + " " + calcularOnce(dosUltimosDigitos);}
 															  if(((dosUltimosDigitos/10)<10)&&(dosUltimosDigitos>20)&&(dosUltimosDigitos<100)) { resultado2=calcularCentena(centena) + " " + calcularDecena(dosUltimosDigitos/10) + " y " + calcularUnidad(dosUltimosDigitos%10);}
-				
-			}
-		
-		
+															}
 		}
 		
 		
-		if(((numero/1000)>0)&&(numero/1000<10)) { if(numero==1000) { resultado3=calcularMiles(numero/1000); }
-												{ if(centenaMil==0) { if((dosUltimosDigitos/10)==0)	 { resultado3=calcularMiles(numero/1000) + " " + calcularUnidad(dosUltimosDigitos);}
-																	  if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos/10)>0)&&(dosUltimosDigitos%10==0)) { resultado3=calcularMiles(numero/1000) + " " + calcularDecena(dosUltimosDigitos/10);}
-																	  if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos>10)&&(dosUltimosDigitos<20))) { resultado3=calcularMiles(numero/1000) + " " + calcularOnce(dosUltimosDigitos);}
-																	  if(((dosUltimosDigitos/10)<10)&&(dosUltimosDigitos>20)&&(dosUltimosDigitos<100)) { resultado3=calcularMiles(numero/1000) + " " + calcularDecena(dosUltimosDigitos/10) + " y " + calcularUnidad(dosUltimosDigitos%10);}
-																	}
-												}
-												}
+			if(((numero/1000)>0)&&(numero/1000<10)) { if(numero==1000) { resultado3=calcularMiles(numero/1000); }
+													  if((numero!=1000)&&(centenaMil==0)) { if((dosUltimosDigitos/10)==0)	 { resultado3=calcularMiles(numero/1000) + " " + calcularUnidad(dosUltimosDigitos);}	// VOY AQUI (ESTE YA LO HICE)
+																		  					if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos/10)>0)&&(dosUltimosDigitos%10==0)) { resultado3=calcularMiles(numero/1000) + " " + calcularDecena(dosUltimosDigitos/10);}
+																		  					if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos>10)&&(dosUltimosDigitos<20))) { resultado3=calcularMiles(numero/1000) + " " + calcularOnce(dosUltimosDigitos);}
+																		  					if(((dosUltimosDigitos/10)<10)&&(dosUltimosDigitos>20)&&(dosUltimosDigitos<100)) { resultado3=calcularMiles(numero/1000) + " " + calcularDecena(dosUltimosDigitos/10) + " y " + calcularUnidad(dosUltimosDigitos%10);}
+																		} 
+													  if((numero!=1000)&&(centenaMil!=0)) { if(tresUltimosDigitos==100) { resultado3=calcularMiles(numero/1000) + "cien";}
+																						    if((tresUltimosDigitos!=100)&&((primero==0)&&(segundo==0))) { resultado3=calcularMiles(numero/1000) + calcularCentena(centena); }
+																						    if((tresUltimosDigitos!=100)&&(segundo!=0))	{ if((dosUltimosDigitos/10)==0)	 { resultado3=calcularMiles(numero/1000) + calcularCentena(centena) + " " + calcularUnidad(dosUltimosDigitos);}
+																														  				  if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos/10)>0)&&(dosUltimosDigitos%10==0)) { resultado3=calcularMiles(numero/1000) + calcularCentena(centena) + " " + calcularDecena(dosUltimosDigitos/10);}
+																														  				  if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos>10)&&(dosUltimosDigitos<20))) { resultado3=calcularMiles(numero/1000) + calcularCentena(centena) + " " + calcularOnce(dosUltimosDigitos);}
+																														  				  if(((dosUltimosDigitos/10)<10)&&(dosUltimosDigitos>20)&&(dosUltimosDigitos<100)) { resultado3=calcularMiles(numero/1000) + calcularCentena(centena) + " " + calcularDecena(dosUltimosDigitos/10) + " y " + calcularUnidad(dosUltimosDigitos%10);}
+																																		}
+																						    if((tresUltimosDigitos!=100)&&((segundo==0)&&(primero!=0))) { if((dosUltimosDigitos/10)==0)	 { resultado3=calcularMiles(numero/1000) + calcularCentena(centena) + " " + calcularUnidad(dosUltimosDigitos);}
+																						   											  				  	  if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos/10)>0)&&(dosUltimosDigitos%10==0)) { resultado3=calcularMiles(numero/1000) + calcularCentena(centena) + " " + calcularDecena(dosUltimosDigitos/10);}
+																																		  				  if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos>10)&&(dosUltimosDigitos<20))) { resultado3=calcularMiles(numero/1000) + calcularCentena(centena) + " " + calcularOnce(dosUltimosDigitos);}
+																																		  				  if(((dosUltimosDigitos/10)<10)&&(dosUltimosDigitos>20)&&(dosUltimosDigitos<100)) { resultado3=calcularMiles(numero/1000) + calcularCentena(centena) + " " + calcularDecena(dosUltimosDigitos/10) + " y " + calcularUnidad(dosUltimosDigitos%10);}
+																						    															}
+													  									}
+													 }
+												
 			
-			/*
-														  if(tresUltimosDigitos==100) { resultado3=calcularMiles(numero/1000) + " " + "cien";}
-														  if((tresUltimosDigitos!=100)&&((primero==0)&&(segundo==0))) { resultado3=calcularMiles(numero/1000) + " " + calcularCentena(centena); }
-														
-														  if((tresUltimosDigitos!=100)&&(segundo!=0))	{ if((dosUltimosDigitos/10)==0)	 { resultado3=calcularMiles(numero/1000) + " " + calcularCentena(centena) + " " + calcularUnidad(dosUltimosDigitos);}
-																						  if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos/10)>0)&&(dosUltimosDigitos%10==0)) { resultado3=calcularMiles(numero/1000) + " " + calcularCentena(centena) + " " + calcularDecena(dosUltimosDigitos/10);}
-																						  if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos>10)&&(dosUltimosDigitos<20))) { resultado3=calcularMiles(numero/1000) + " " + calcularCentena(centena) + " " + calcularOnce(dosUltimosDigitos);}
-																						  if(((dosUltimosDigitos/10)<10)&&(dosUltimosDigitos>20)&&(dosUltimosDigitos<100)) { resultado3=calcularMiles(numero/1000) + " " + calcularCentena(centena) + " " + calcularDecena(dosUltimosDigitos/10) + " y " + calcularUnidad(dosUltimosDigitos%10);}
-																						
-														}
-														  if((tresUltimosDigitos!=100)&&((segundo==0)&&(primero!=0))) { if((dosUltimosDigitos/10)==0)	 { resultado3=calcularMiles(numero/1000) + " " + calcularCentena(centena) + " " + calcularUnidad(dosUltimosDigitos);}
-																													    if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos/10)>0)&&(dosUltimosDigitos%10==0)) { resultado3=calcularMiles(numero/1000) + " " + calcularCentena(centena) + " " + calcularDecena(dosUltimosDigitos/10);}
-																													    if(((dosUltimosDigitos/10)<10)&&((dosUltimosDigitos>10)&&(dosUltimosDigitos<20))) { resultado3=calcularMiles(numero/1000) + " " + calcularCentena(centena) + " " + calcularOnce(dosUltimosDigitos);}
-																													    if(((dosUltimosDigitos/10)<10)&&(dosUltimosDigitos>20)&&(dosUltimosDigitos<100)) { resultado3=calcularMiles(numero/1000) + " " + calcularCentena(centena) + " " + calcularDecena(dosUltimosDigitos/10) + " y " + calcularUnidad(dosUltimosDigitos%10);}
-																		
-															*/		  														
+				  														
 				
 								
 	
