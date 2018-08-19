@@ -42,13 +42,13 @@ class MontoEscrito2Test extends MontoEscrito2 {
 	}
 	
 	@Test
-	void testCalcular() {
-		MontoEscrito2 calcularDosDigitos = new MontoEscrito2();
-		String resultadoEsperado = "treinta y cinco";
-		String resultadoObtenido = calcularDosDigitos.convertirDosDigitos(35);
+	void testConvertir() {
+		MontoEscrito2 Convertir = new MontoEscrito2();
+		String resultadoEsperado = "mil quince";
+		String resultadoObtenido = Convertir.convertir(1015);
 		assertEquals(resultadoEsperado, resultadoObtenido);
 	}
-	
+
 	
 
 }
