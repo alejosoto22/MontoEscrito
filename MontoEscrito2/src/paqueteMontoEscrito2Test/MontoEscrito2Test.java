@@ -44,8 +44,8 @@ class MontoEscrito2Test extends MontoEscrito2 {
 	@Test
 	void testConvertir() {
 		MontoEscrito2 Convertir = new MontoEscrito2();
-		String resultadoEsperado = "mil uno";
-		String resultadoObtenido = Convertir.convertir(1001);
+		String resultadoEsperado = "mil ochenta y siete";
+		String resultadoObtenido = Convertir.convertir(1087);
 		assertEquals(resultadoEsperado, resultadoObtenido);
 	}
 
